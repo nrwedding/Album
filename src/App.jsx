@@ -16,7 +16,7 @@ export default function App() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
-    const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '181026').trim().toLowerCase();
+    const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '3606').trim().toLowerCase();
 
     // Check localStorage first
     const storedAuth = localStorage.getItem('nr_wedding_auth');
@@ -49,7 +49,7 @@ export default function App() {
   }, []);
 
   const handleManualUnlock = () => {
-    const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '181026').trim().toLowerCase();
+    const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '3606').trim().toLowerCase();
     localStorage.setItem('nr_wedding_auth', expectedKey);
     setIsAuthorized(true);
   };

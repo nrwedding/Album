@@ -5,7 +5,7 @@ export default function PrivateGate({ onUnlock }) {
   const [passkey, setPasskey] = useState('');
   const [error, setError] = useState(false);
 
-  const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '181026').trim();
+  const expectedKey = (import.meta.env.VITE_ACCESS_KEY || '3606').trim();
 
   const handleSubmit = (e) => {
     e.preventDefault();
