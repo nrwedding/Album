@@ -2,7 +2,8 @@ import React from 'react';
 import { Download, ExternalLink, Clock, ShieldCheck, Heart, Sparkles } from 'lucide-react';
 
 export default function DownloadMemories() {
-  const driveUrl = import.meta.env.VITE_GOOGLE_DRIVE_FOLDER_URL?.trim();
+  const DEFAULT_DRIVE_URL = "https://drive.google.com/drive/folders/1Yyszv9D9xUf9YhRbBIsUhAF8VUJhc7EA?usp=drive_link";
+  const driveUrl = (import.meta.env.VITE_GOOGLE_DRIVE_FOLDER_URL || DEFAULT_DRIVE_URL).trim();
   const hasDriveLink = Boolean(driveUrl && driveUrl.length > 5 && driveUrl.startsWith('http'));
 
   return (
